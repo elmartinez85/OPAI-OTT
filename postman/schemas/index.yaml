@@ -1,0 +1,126 @@
+openapi: '3.1.0'
+info:
+  version: '1.0.0'
+  title: 'NBCUniversal Local OTT API'
+  description: An API build from the bones of the App API.
+servers:
+- url: https://{environment}.{domain}.com/{basePath}/{version}
+  variables:
+    environment:
+      enum:
+        - 'dev'
+        - 'stage'
+        - 'uat'
+        - 'www'
+      default: 'www'
+    domain:
+      default: 'nbcnewyork'
+    basePath:
+      enum:
+        - 'apps/ott'
+      default: 'apps/ott'
+    version:
+      default: 'v1'
+paths:
+  /spacecrafts/{spacecraftId}:
+    parameters:
+      - name: spacecraftId
+        description: The unique identifier of the spacecraft
+        in: path
+        required: true
+        schema:
+          $ref: '#/components/schemas/SpacecraftId'
+    get:
+      summary: Read a spacecraft
+      responses:
+        '200':
+          description: The spacecraft corresponding to the provided `spacecraftId`
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Spacecraft'
+        404:
+          description: No spacecraft found for the provided `spacecraftId`
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        500:
+          description: Unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /term/{termId}:
+    get:
+      summary: Retrieve content from a term.
+      responses:
+        '200':
+          description: The term corresponding to the provided `termID`
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Spacecraft'
+        404:
+          description: No term found for the provided `termID`
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        500:
+          description: Unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    parameters:
+      - name: termId
+        description: The unique identifier of a term. A term is either a Category or Collection within WordPress
+        in: path
+        required: true
+        schema:
+          $ref: '#/components/schemas/TermId'
+components:
+  schemas:
+    SpacecraftId:
+      description: The unique identifier of a spacecraft
+      type: string
+    TermId:
+      description: The unique identifier of a term. A term is either a Category or Collection within WordPress
+      type: string
+    Spacecraft:
+      type: object
+      required:
+        - id
+        - name
+        - type
+      properties:
+        id:
+          $ref: '#/components/schemas/SpacecraftId'
+        name:
+          type: string
+        type:
+          type: string
+          enum:
+            - capsule
+            - probea
+            - satellite
+            - spaceplane
+            - station
+        description:
+          type: string
+    Error:
+      type: object
+      required:
+        - message
+      properties:
+        message:
+          description: A human readable error message
+          type: string
+  securitySchemes:
+    ApiKey:
+      type: apiKey
+      in: header
+      name: X-Api-Key
+security:
+  - ApiKey: []
