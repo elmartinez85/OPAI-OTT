@@ -10,8 +10,12 @@ files[] = {"id":"4387618-b9c44f80-01da-462e-a9a6-9302ef6fd587","path":"OTT API(1
 
 [relations.apiDefinition]
 rootDirectory = postman/schemas
-files[] = {"path":"index.yaml","metaData":{}}
+files[] = {"path":"parameters/platform.yaml","metaData":{}}
+files[] = {"path":"parameters/termId.yaml","metaData":{}}
+files[] = {"path":"root.yaml","metaData":{}}
+files[] = {"path":"schemas/kinds/video.yaml","metaData":{}}
+files[] = {"path":"schemas/partials/date.yaml","metaData":{}}
 
 [relations.apiDefinition.metaData]
 type = openapi:3
-rootFiles[] = index.yaml
+rootFiles[] = root.yaml

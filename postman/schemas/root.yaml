@@ -22,45 +22,16 @@ servers:
     version:
       default: 'v1'
 paths:
-  /spacecrafts/{spacecraftId}:
-    parameters:
-      - name: spacecraftId
-        description: The unique identifier of the spacecraft
-        in: path
-        required: true
-        schema:
-          $ref: '#/components/schemas/SpacecraftId'
-    get:
-      summary: Read a spacecraft
-      responses:
-        '200':
-          description: The spacecraft corresponding to the provided `spacecraftId`
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Spacecraft'
-        404:
-          description: No spacecraft found for the provided `spacecraftId`
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error'
-        500:
-          description: Unexpected error
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error'
   /term/{termId}:
     get:
-      summary: Retrieve content from a term.
+      summary: Get content from term.
       responses:
         '200':
           description: The term corresponding to the provided `termID`
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Spacecraft'
+                $ref: './schemas/kinds/video.yaml'
         404:
           description: No term found for the provided `termID`
           content:
@@ -79,7 +50,13 @@ paths:
         in: path
         required: true
         schema:
-          $ref: '#/components/schemas/TermId'
+          $ref: './parameters/termId.yaml'
+      - name: platform
+        description: Enum for which platform is making the API request
+        in: query
+        required: true
+        schema:
+          $ref: './parameters/platform.yaml'
   /config:
     get:
       summary: Retrieve content from a term.
@@ -108,7 +85,7 @@ paths:
         in: query
         required: true
         schema:
-          $ref: '#/parameters/platform.json'
+          $ref: './parameters/platform.yaml'
 components:
   schemas:
     SpacecraftId:
@@ -146,10 +123,3 @@ components:
         message:
           description: A human readable error message
           type: string
-  securitySchemes:
-    ApiKey:
-      type: apiKey
-      in: header
-      name: X-Api-Key
-security:
-  - ApiKey: []
