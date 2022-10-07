@@ -1,4 +1,4 @@
-openapi: '3.1.0'
+openapi: '3.0.0'
 info:
   version: '1.0.0'
   title: 'NBCUniversal Local OTT API'
@@ -80,6 +80,35 @@ paths:
         required: true
         schema:
           $ref: '#/components/schemas/TermId'
+  /config:
+    get:
+      summary: Retrieve content from a term.
+      responses:
+        '200':
+          description: The term corresponding to the provided `termID`
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Spacecraft'
+        404:
+          description: No term found for the provided `termID`
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        500:
+          description: Unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    parameters:
+      - name: platform
+        description: Enum for which platform is making the API request
+        in: query
+        required: true
+        schema:
+          $ref: '#/parameters/platform.json'
 components:
   schemas:
     SpacecraftId:
@@ -103,7 +132,7 @@ components:
           type: string
           enum:
             - capsule
-            - probea
+            - probe
             - satellite
             - spaceplane
             - station

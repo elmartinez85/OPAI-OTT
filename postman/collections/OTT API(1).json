@@ -1,15 +1,15 @@
 {
 	"info": {
-		"_postman_id": "4083578c-b58a-4ce7-88fa-1d60013d9ce2",
+		"_postman_id": "b9c44f80-01da-462e-a9a6-9302ef6fd587",
 		"name": "OTT API",
 		"description": "An API build from the bones of the App API.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_uid": "4387618-4083578c-b58a-4ce7-88fa-1d60013d9ce2"
+		"_uid": "4387618-b9c44f80-01da-462e-a9a6-9302ef6fd587"
 	},
 	"item": [
 		{
 			"name": "Read a spacecraft",
-			"id": "6a4aa6b5-6e95-458e-9f8e-5200d4c65ad8",
+			"id": "bbfb785a-8b83-4ac3-847c-9e874d706cb7",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -59,14 +59,15 @@
 			},
 			"response": [
 				{
-					"id": "3cef8f60-209e-424f-920e-91b33f016c9f",
+					"id": "96cf665f-6758-42c6-bb23-c5dc73a4d961",
 					"name": "The spacecraft corresponding to the provided `spacecraftId`",
 					"originalRequest": {
 						"method": "GET",
 						"header": [
 							{
-								"key": "Accept",
-								"value": "application/json"
+								"description": "Added as a part of security scheme: apikey",
+								"key": "X-Api-Key",
+								"value": "<API Key>"
 							}
 						],
 						"url": {
@@ -115,17 +116,18 @@
 						}
 					],
 					"cookie": [],
-					"body": "{\n  \"id\": \"amet\",\n  \"name\": \"fugiat sit\",\n  \"type\": \"capsule\",\n  \"description\": \"e\"\n}"
+					"body": "{\n  \"id\": \"ex occaecat veniam\",\n  \"name\": \"occaecat adipisicing veniam nulla\",\n  \"type\": \"satellite\",\n  \"description\": \"ea culpa officia pariatur voluptate\"\n}"
 				},
 				{
-					"id": "73279069-d2b0-45b5-9f2f-271ed27a1a37",
+					"id": "9c818c70-f276-4dac-b833-54b56a968dd1",
 					"name": "No spacecraft found for the provided `spacecraftId`",
 					"originalRequest": {
 						"method": "GET",
 						"header": [
 							{
-								"key": "Accept",
-								"value": "application/json"
+								"description": "Added as a part of security scheme: apikey",
+								"key": "X-Api-Key",
+								"value": "<API Key>"
 							}
 						],
 						"url": {
@@ -174,17 +176,18 @@
 						}
 					],
 					"cookie": [],
-					"body": "{\n  \"message\": \"dolor commodo laboris Duis exercitation\"\n}"
+					"body": "{\n  \"message\": \"laborum Lorem\"\n}"
 				},
 				{
-					"id": "5c12077c-b48c-42ac-b5dc-32c56b9260b7",
+					"id": "9b86c096-4612-4005-b76b-83a34f82e4c3",
 					"name": "Unexpected error",
 					"originalRequest": {
 						"method": "GET",
 						"header": [
 							{
-								"key": "Accept",
-								"value": "application/json"
+								"description": "Added as a part of security scheme: apikey",
+								"key": "X-Api-Key",
+								"value": "<API Key>"
 							}
 						],
 						"url": {
@@ -233,13 +236,13 @@
 						}
 					],
 					"cookie": [],
-					"body": "{\n  \"message\": \"dolor commodo laboris Duis exercitation\"\n}"
+					"body": "{\n  \"message\": \"laborum Lorem\"\n}"
 				}
 			]
 		},
 		{
 			"name": "Retrieve content from a term.",
-			"id": "51b0150a-26fe-4743-aedb-41b112011500",
+			"id": "aa223879-1a85-4274-9bc8-bcd71bb2748b",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -289,14 +292,15 @@
 			},
 			"response": [
 				{
-					"id": "4a3b1872-6dfb-4be4-b3e6-a1fe8bb3b8a1",
+					"id": "ecd52e43-fb7f-4365-bd12-a95d7bc55ed7",
 					"name": "The term corresponding to the provided `termID`",
 					"originalRequest": {
 						"method": "GET",
 						"header": [
 							{
-								"key": "Accept",
-								"value": "application/json"
+								"description": "Added as a part of security scheme: apikey",
+								"key": "X-Api-Key",
+								"value": "<API Key>"
 							}
 						],
 						"url": {
@@ -345,17 +349,18 @@
 						}
 					],
 					"cookie": [],
-					"body": "{\n  \"id\": \"amet\",\n  \"name\": \"fugiat sit\",\n  \"type\": \"capsule\",\n  \"description\": \"e\"\n}"
+					"body": "{\n  \"id\": \"ex occaecat veniam\",\n  \"name\": \"occaecat adipisicing veniam nulla\",\n  \"type\": \"satellite\",\n  \"description\": \"ea culpa officia pariatur voluptate\"\n}"
 				},
 				{
-					"id": "8ae6facf-10b1-4da5-bf93-4f4e96fbeb50",
+					"id": "06469486-8ae6-466a-9136-f55c29c32d1f",
 					"name": "No term found for the provided `termID`",
 					"originalRequest": {
 						"method": "GET",
 						"header": [
 							{
-								"key": "Accept",
-								"value": "application/json"
+								"description": "Added as a part of security scheme: apikey",
+								"key": "X-Api-Key",
+								"value": "<API Key>"
 							}
 						],
 						"url": {
@@ -404,17 +409,18 @@
 						}
 					],
 					"cookie": [],
-					"body": "{\n  \"message\": \"dolor commodo laboris Duis exercitation\"\n}"
+					"body": "{\n  \"message\": \"laborum Lorem\"\n}"
 				},
 				{
-					"id": "f735e43c-1c88-4d8f-b728-52bbf106a154",
+					"id": "64c4cbd1-7290-42fb-be76-9ef12a5d2617",
 					"name": "Unexpected error",
 					"originalRequest": {
 						"method": "GET",
 						"header": [
 							{
-								"key": "Accept",
-								"value": "application/json"
+								"description": "Added as a part of security scheme: apikey",
+								"key": "X-Api-Key",
+								"value": "<API Key>"
 							}
 						],
 						"url": {
@@ -463,7 +469,241 @@
 						}
 					],
 					"cookie": [],
-					"body": "{\n  \"message\": \"dolor commodo laboris Duis exercitation\"\n}"
+					"body": "{\n  \"message\": \"laborum Lorem\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Retrieve content from a term.",
+			"id": "34064854-2257-43e2-928e-a6f5a0a67dc6",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/config?value=reference %23/parameters/platform.json not found in the OpenAPI spec",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"config"
+					],
+					"query": [
+						{
+							"key": "value",
+							"value": "reference #/parameters/platform.json not found in the OpenAPI spec",
+							"description": "(Required) Enum for which platform is making the API request"
+						}
+					],
+					"variable": [
+						{
+							"key": "environment",
+							"value": "{{environment}}",
+							"description": " (This can only be one of dev,stage,uat,www)"
+						},
+						{
+							"key": "domain",
+							"value": "{{domain}}"
+						},
+						{
+							"key": "basePath",
+							"value": "{{basePath}}",
+							"description": " (This can only be one of apps/ott)"
+						},
+						{
+							"key": "version",
+							"value": "{{version}}"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"id": "11ce3bda-bacd-439c-a43c-c8b0bf30dc03",
+					"name": "The term corresponding to the provided `termID`",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"description": "Added as a part of security scheme: apikey",
+								"key": "X-Api-Key",
+								"value": "<API Key>"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/config?value=reference %23/parameters/platform.json not found in the OpenAPI spec",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"config"
+							],
+							"query": [
+								{
+									"key": "value",
+									"value": "reference #/parameters/platform.json not found in the OpenAPI spec"
+								}
+							],
+							"variable": [
+								{
+									"key": "environment",
+									"value": "{{environment}}",
+									"description": " (This can only be one of dev,stage,uat,www)"
+								},
+								{
+									"key": "domain",
+									"value": "{{domain}}"
+								},
+								{
+									"key": "basePath",
+									"value": "{{basePath}}",
+									"description": " (This can only be one of apps/ott)"
+								},
+								{
+									"key": "version",
+									"value": "{{version}}"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n  \"id\": \"ex occaecat veniam\",\n  \"name\": \"occaecat adipisicing veniam nulla\",\n  \"type\": \"satellite\",\n  \"description\": \"ea culpa officia pariatur voluptate\"\n}"
+				},
+				{
+					"id": "608528bf-1b82-4d50-8d3e-605790cecdc8",
+					"name": "No term found for the provided `termID`",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"description": "Added as a part of security scheme: apikey",
+								"key": "X-Api-Key",
+								"value": "<API Key>"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/config?value=reference %23/parameters/platform.json not found in the OpenAPI spec",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"config"
+							],
+							"query": [
+								{
+									"key": "value",
+									"value": "reference #/parameters/platform.json not found in the OpenAPI spec"
+								}
+							],
+							"variable": [
+								{
+									"key": "environment",
+									"value": "{{environment}}",
+									"description": " (This can only be one of dev,stage,uat,www)"
+								},
+								{
+									"key": "domain",
+									"value": "{{domain}}"
+								},
+								{
+									"key": "basePath",
+									"value": "{{basePath}}",
+									"description": " (This can only be one of apps/ott)"
+								},
+								{
+									"key": "version",
+									"value": "{{version}}"
+								}
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n  \"message\": \"laborum Lorem\"\n}"
+				},
+				{
+					"id": "f5daf1c8-23b3-4776-8302-6ece7543d861",
+					"name": "Unexpected error",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"description": "Added as a part of security scheme: apikey",
+								"key": "X-Api-Key",
+								"value": "<API Key>"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/config?value=reference %23/parameters/platform.json not found in the OpenAPI spec",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"config"
+							],
+							"query": [
+								{
+									"key": "value",
+									"value": "reference #/parameters/platform.json not found in the OpenAPI spec"
+								}
+							],
+							"variable": [
+								{
+									"key": "environment",
+									"value": "{{environment}}",
+									"description": " (This can only be one of dev,stage,uat,www)"
+								},
+								{
+									"key": "domain",
+									"value": "{{domain}}"
+								},
+								{
+									"key": "basePath",
+									"value": "{{basePath}}",
+									"description": " (This can only be one of apps/ott)"
+								},
+								{
+									"key": "version",
+									"value": "{{version}}"
+								}
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n  \"message\": \"laborum Lorem\"\n}"
 				}
 			]
 		}
@@ -488,55 +728,49 @@
 			}
 		]
 	},
-	"event": [
-		{
-			"listen": "prerequest",
-			"script": {
-				"id": "469685c9-ccb4-4ac7-975e-094d75cdf184",
-				"type": "text/javascript",
-				"exec": [
-					""
-				]
-			}
-		},
-		{
-			"listen": "test",
-			"script": {
-				"id": "bf66ec75-a1cb-4284-a7e5-a881a1f6f8c7",
-				"type": "text/javascript",
-				"exec": [
-					""
-				]
-			}
-		}
-	],
 	"variable": [
 		{
-			"id": "44b59ac6-042d-4a68-9dd9-0be354d29b53",
+			"id": "795493b8-5ee7-47f0-bdd8-a824b56bc55a",
 			"key": "environment",
 			"value": "www",
-			"type": "any"
+			"type": "any",
+			"description": {
+				"content": " (This can only be one of dev,stage,uat,www)",
+				"type": "text/plain"
+			}
 		},
 		{
-			"id": "28801842-3bdf-4dc7-8690-808b110d60af",
+			"id": "55139495-3d90-4ec5-b33e-ea36625c09b7",
 			"key": "domain",
-			"value": "nbcnewyork.com",
-			"type": "any"
+			"value": "nbcnewyork",
+			"type": "any",
+			"description": {
+				"content": "",
+				"type": "text/plain"
+			}
 		},
 		{
-			"id": "8e0d1ef4-086b-4131-922d-1ba261163307",
+			"id": "c57a3554-1c85-491a-bc9a-9132fb1ecd42",
 			"key": "basePath",
 			"value": "apps/ott",
-			"type": "any"
+			"type": "any",
+			"description": {
+				"content": " (This can only be one of apps/ott)",
+				"type": "text/plain"
+			}
 		},
 		{
-			"id": "647fb958-7139-498e-a517-632d640186e7",
+			"id": "38826c0c-968f-44f4-9640-2614481f0dc4",
 			"key": "version",
 			"value": "v1",
-			"type": "any"
+			"type": "any",
+			"description": {
+				"content": "",
+				"type": "text/plain"
+			}
 		},
 		{
-			"id": "628f2a29-5b93-43f4-b962-a1806f063d36",
+			"id": "0403c716-b990-49e7-a4ba-d10840e1f47f",
 			"key": "baseUrl",
 			"value": "https://{{environment}}.{{domain}}.com/{{basePath}}/{{version}}",
 			"type": "string"

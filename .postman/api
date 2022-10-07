@@ -4,7 +4,7 @@ id = 247ca087-b212-4701-b9ec-6545986108da
 
 [relations.collections]
 rootDirectory = postman/collections
-files[] = {"id":"4387618-4083578c-b58a-4ce7-88fa-1d60013d9ce2","path":"OTT API.json","metaData":{}}
+files[] = {"id":"4387618-b9c44f80-01da-462e-a9a6-9302ef6fd587","path":"OTT API(1).json","metaData":{}}
 
 [relations.collections.metaData]
 
@@ -13,5 +13,5 @@ rootDirectory = postman/schemas
 files[] = {"path":"index.yaml","metaData":{}}
 
 [relations.apiDefinition.metaData]
-type = openapi:3_1
+type = openapi:3
 rootFiles[] = index.yaml
